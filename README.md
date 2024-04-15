@@ -12,4 +12,4 @@ Los integrantes actuales son:
 ## Wiki
 Puede acceder a la Wiki mediante el siguiente [Home_Wiki](https://github.com/Tabby2109/INF236-2023-2-PAR201-GRUPO-02/wiki)
 
-* Hito 1: [Retrospectiva]([https://github.com/Tabby2109/INF236-2023-2-PAR201-GRUPO-02/wiki/Retrospectiva](https://github.com/naikelito/INF225-GRUPO29-PROYECTO/wiki/Restrospectiva)
+* Hito 1: [Retrospectiva](https://github.com/naikelito/INF225-GRUPO29-PROYECTO/wiki/Restrospectiva)
