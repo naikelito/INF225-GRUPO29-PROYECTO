@@ -10,6 +10,6 @@ Los integrantes actuales son:
 * Belén González - 202130552-1
 
 ## Wiki
-Puede acceder a la Wiki mediante el siguiente [Home_Wiki](https://github.com/Tabby2109/INF236-2023-2-PAR201-GRUPO-02/wiki)
+Puede acceder a la Wiki mediante el siguiente [Home_wiki](https://github.com/naikelito/INF225-GRUPO29-PROYECTO/wiki)
 
 * Hito 1: [Retrospectiva](https://github.com/naikelito/INF225-GRUPO29-PROYECTO/wiki/Restrospectiva)
