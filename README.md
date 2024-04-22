@@ -13,7 +13,6 @@ Los integrantes actuales son:
 Puede acceder a la Wiki mediante el siguiente [Home_wiki](https://github.com/naikelito/INF225-GRUPO29-PROYECTO/wiki)
 
 * Hito 1: [Retrospectiva](https://github.com/naikelito/INF225-GRUPO29-PROYECTO/wiki/Restrospectiva)
-* [Hito 2](https://github.com/naikelito/INF225-GRUPO29-PROYECTO/wiki/Hito-2)
 ## Notas importantes
 
 Hito 2:
