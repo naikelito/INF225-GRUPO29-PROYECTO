@@ -129,3 +129,8 @@ header {
 .contenedor-derecha {
     background-color: rgb(233, 221, 221);
 }
+
+.box-1{
+    max-width: 50%;
+    height: 50%;
+}
