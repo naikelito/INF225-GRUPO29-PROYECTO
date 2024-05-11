@@ -17,6 +17,9 @@ Puede acceder a la Wiki mediante el siguiente [Home_wiki](https://github.com/nai
 
 Hito 2:
 * La HU de mayor prioridad actuals son las TENS, dado que participan en los reportes diarios y toman las horas de los/as pacientes.
-- Se crearon 5 HU completamente nuevas, dado que las anteriores difieren en exceso con los requisitos de esta entrega.ç
+- Se crearon 5 HU completamente nuevas, dado que las anteriores difieren en exceso con los requisitos de esta entrega.
 - Todo lo requerido se encuentra en la wiki y el desarrollo web en la branch correspondiente.
 - Se arreglaron los errores del hito 1 retrospectiva
+
+Hito 3:
+- La nueva HU desarrollada fue la de jefe de unidad. Se implementó el código.
