@@ -22,5 +22,5 @@ Hito 2:
 - Se arreglaron los errores del hito 1 retrospectiva
 
 Hito 3:
-- La nueva HU desarrollada fue la de jefe de unidad. Se implementó el código.
-- Las pruebas de los tests se encuentran en la sección "Pruebas hito 3" de la Wiki.
+- La nuevas HU desarrolladsa fueron la de jefe de unidad y TENS. Se implementó el código.
+- La tabla se encuentra subira junto a este readme.
