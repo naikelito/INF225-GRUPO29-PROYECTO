@@ -3,7 +3,7 @@ import { useState,setData, useEffect } from 'react';
 
 import { getTest } from './funtions/test';
 
-import login from './Components/login';
+import Log from './Components/Log';
 
 /*
   const [data,setData] = useState("hello world!");
@@ -28,7 +28,7 @@ function App() {
 return(
   <div className='App'>
     
-
+    <Log/>
   </div>
 );
 }
