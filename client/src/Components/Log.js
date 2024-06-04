@@ -1,7 +1,18 @@
 import React from 'react'
+import "./css/inicio.css";
 
 export default function Login() {
   return (
+
+    <div>
+
+     <header class="xd">
+        <nav class="navegation">
+            <a href="#">Inicio</a>
+            <a href="#">Contacto</a>
+
+        </nav>
+    </header>
     <div className="login-box">
         <div class="login-header">
             <header>Login</header>
@@ -23,6 +34,7 @@ export default function Login() {
         <div class="sign-up-link"><p>
             No tienes cuenta ? <a href="#">Registrarse</a>
         </p></div>
+    </div>
     </div>
   )
 }
