@@ -1,4 +1,5 @@
 const Paciente = require('../models/paciente.js');
+const bcrypt = require('bcryptjs');
 
 // Obtener todos los pacientes
 exports.getPacientes = async (req, res) => {
@@ -41,6 +42,40 @@ exports.deletePaciente = async (req, res) => {
         await Paciente.findByIdAndDelete(id);
         res.json({ msg: 'Paciente eliminado' });
     } catch (err) {
+        res.status(500).send('Error del servidor');
+    }
+};
+
+//registro paciente
+exports.signup = async (req, res) => {
+    const { nombre, rut, email, telefono, password, alergias, nacimiento, fonasa, direccion } = req.body;
+
+    try {
+        let paciente = await Paciente.findOne({ email });
+        if (paciente) {
+            return res.status(400).json({ msg: 'El paciente ya existe' });
+        }
+
+        paciente = new Paciente({
+            nombre,
+            rut,
+            email,
+            telefono,
+            password,
+            alergias,
+            nacimiento,
+            fonasa,
+            direccion,
+        });
+
+        const salt = await bcrypt.genSalt(10);
+        paciente.password = await bcrypt.hash(password, salt);
+
+        await paciente.save();
+
+        res.json({ msg: 'Paciente registrado exitosamente' });
+    } catch (err) {
+        console.error('Error en el registro:', err.message);
         res.status(500).send('Error del servidor');
     }
 };

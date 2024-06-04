@@ -6,6 +6,7 @@ exports.getPersonal = async (req, res) => {
         const personal = await Personal.find();
         res.json(personal);
     } catch (err) {
+        console.error('Error al obtener el personal:', err.message);
         res.status(500).send('Error del servidor');
     }
 };
