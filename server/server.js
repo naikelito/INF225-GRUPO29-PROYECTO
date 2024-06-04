@@ -2,10 +2,14 @@ const express = require('express');
 const connectDB = require('./config/db');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
+
 
 const itemRoutes = require('./routes/itemRoutes');
 const pacienteRoutes = require('./routes/pacienteRoutes');
 const personalRoutes = require('./routes/personalRoutes');
+const authRoutes = require('./routes/authRoutes');
+
 
 dotenv.config();
 
@@ -24,6 +28,7 @@ app.use(morgan('dev'));
 app.use('/api/items', itemRoutes);
 app.use('/api/pacientes', pacienteRoutes);
 app.use('/api/personal', personalRoutes);
+app.use('/api/auth', authRoutes);
 
 // Rutas
 app.get('/', (req, res) => res.send('API is running...'));
