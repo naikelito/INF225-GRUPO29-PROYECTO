@@ -3,6 +3,7 @@ const connectDB = require('./config/db');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 dotenv.config(); // Cargar las variables de entorno desde .env
 
@@ -10,6 +11,9 @@ const app = express();
 
 // Conectar a la base de datos
 connectDB();
+
+
+app.use(cors({origin: true, credentials: true}));
 
 // Middleware para manejar JSON y cookies
 app.use(express.json());
