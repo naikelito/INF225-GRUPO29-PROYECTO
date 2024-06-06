@@ -12,7 +12,6 @@ const app = express();
 // Conectar a la base de datos
 connectDB();
 
-
 app.use(cors({origin: true, credentials: true}));
 
 // Middleware para manejar JSON y cookies
