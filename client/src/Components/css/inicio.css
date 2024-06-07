@@ -15,6 +15,7 @@ body{
     background: url('../images/Totem_Fachada2-1.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    backdrop-filter: blur(10px);
 }
 
 .xd{
@@ -160,4 +161,14 @@ section a{
 .sign-up-link a{
     color: #000;
     font-weight: 600;
+}
+
+.info-container{
+    height: 133px;
+}
+
+.h2{
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }

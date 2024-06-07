@@ -77,7 +77,7 @@ export default function SignUp() {
             .then(data => {
                 if (data.msg === 'Paciente registrado exitosamente') {
                     alert('Registro exitoso. Ahora puede iniciar sesión.');
-                    navigate('/'); // Redirige a la página de inicio de sesión (hay q hacer q la ruta al login sea /login xd, por mientras esta de /)
+                    navigate('/Login'); // Redirige a la página de inicio de sesión (hay q hacer q la ruta al login sea /login xd, por mientras esta de /)
                 } else {
                     alert('Error en el registro: ' + data.msg);
                 }
@@ -94,7 +94,7 @@ export default function SignUp() {
         <div>
             <header className="xd">
                 <nav className="navegation">
-                    <a href="#">Inicio</a>
+                    <a href="/">Inicio</a>
                     <a href="#">Contacto</a>
                     <a href="#">{cookies.user_type}</a>
                     

@@ -40,7 +40,7 @@ export default function Inicio() {
         <div>
             <header className="xd">
                 <nav className="navegation">
-                    <a href="#">Inicio</a>
+                    <a href="/">Inicio</a>
                     <a href="#">Contacto</a>
                     <a>{cookies.user_type}</a>
                     {cookies.user_type != "" ? (

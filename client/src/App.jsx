@@ -7,23 +7,8 @@ import { Cookies, CookiesProvider, useCookies } from 'react-cookie'
 import SignUp from './Components/SignUp';
 import Inicio from './Components/Inicio';
 import Login from './Components/Log';
-
-/*
-  const [data,setData] = useState("hello world!");
-
-  useEffect(() =>{
-    getTest().then((res) =>{
-      setData(res.message)
-    })
-    .catch((err) =>console.log(err))
-  },[]);
-
-  return (
-    <div className='App'>
-      <h1>{data}</h1>
-    </div>
-  );
-*/
+import Examenes from './Components/Examenes';
+import ReserveConsultation from './Components/ReservaConsulta';
 
 
 function App() {
@@ -36,6 +21,8 @@ return(
             <Route path = "/" element={<Inicio/>}/>
             <Route path = "/SignUp" element={<SignUp/>}/>
             <Route path = "/Login" element={<Login/>}/>
+            <Route path="/reservar/:examType" element={<ReserveConsultation />} />
+            <Route path="/examenes" element={<Examenes/>} />
             
           </Routes>
         </CookiesProvider>

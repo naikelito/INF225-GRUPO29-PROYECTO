@@ -26,12 +26,14 @@ const itemRoutes = require('./routes/itemRoutes');
 const pacienteRoutes = require('./routes/pacienteRoutes');
 const personalRoutes = require('./routes/personalRoutes');
 const authRoutes = require('./routes/authRoutes');
+const consultaRoutes = require('./routes/consultaRoutes');
 
 // Usar rutas
 app.use('/api/items', itemRoutes);
 app.use('/api/pacientes', pacienteRoutes);
 app.use('/api/personal', personalRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/consultas', consultaRoutes);
 
 // Ruta base
 app.get('/', (req, res) => res.send('API is running...'));

@@ -41,4 +41,13 @@ router.post('/register', async (req, res) => {
     }
 });
 
+router.get('/medicos', async (req, res) => {
+    try {
+        const medicos = await Personal.find({ cargo: 'medico' });
+        res.json(medicos);
+    } catch (error) {
+        res.status(500).send('Error al obtener los médicos');
+    }
+});
+
 module.exports = router;

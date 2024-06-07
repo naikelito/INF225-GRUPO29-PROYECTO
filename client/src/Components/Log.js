@@ -66,7 +66,7 @@ export default function Login() {
 
      <header class="xd">
         <nav class="navegation">
-            <a href="#">Inicio</a>
+            <a href="/">Inicio</a>
             <a href="#">Contacto</a>
             <a href="#">{cookies.user_type}</a>
 
