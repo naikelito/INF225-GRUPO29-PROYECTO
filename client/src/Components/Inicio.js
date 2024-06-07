@@ -34,6 +34,12 @@ export default function Inicio() {
     };
 
 
+    const Go_to_SignUpPer = () => {
+        navigate("/SignUpPer");
+    };
+
+
+
 
 
     return (
@@ -44,10 +50,11 @@ export default function Inicio() {
                     <a href="#">Contacto</a>
                     <a>{cookies.user_type}</a>
                     {cookies.user_type != "" ? (
-                            <button className='Button' onClick={Pressed} >Salir de sesión</button>
+                            <a className='Button' onClick={Pressed} >Salir de sesión</a>
                         ) : (
                             <a onClick={Go_to_Login}>Iniciar Sesión</a>
                         )}
+
 
                 </nav>
             </header>
@@ -56,7 +63,7 @@ export default function Inicio() {
                 {cookies.user_type != "" ? (
                             <header>¡Qué bueno volver a verte!</header>
                         ) : (
-                            <header>¡Bienvenido a la clínica Davila!</header>
+                            <header>¡Bienvenido a la clínica Dávila!</header>
                         )}
                 </div>
                 <h1 className="h1">¿Quienes somos?</h1>
@@ -66,6 +73,13 @@ export default function Inicio() {
                 <div className="input-submit">
                     <button onClick={Pressed} className="submit-btn">Reserva tu hora</button>
                 </div>
+
+                {cookies.user_type == "Personal" && (
+                        <div className="input-submit">
+                            <button onClick={Go_to_SignUpPer} className="submit-btn">Registrar Personal</button>
+                        </div>
+                )}
+
                 <div className="map-info-container">
                     <div className="map-container">
                         <MapContainer style={{ height: "400px", width: "100%" }} center={[-33.51884,-70.59663]} zoom={13} scrollWheelZoom={false}>

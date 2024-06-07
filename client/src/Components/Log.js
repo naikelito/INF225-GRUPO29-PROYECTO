@@ -25,6 +25,13 @@ export default function Login() {
         navigate("/SignUp");
 
     };
+
+
+    const Go_to_Login = () => {
+        navigate("/Login");
+    };
+
+
     const Pressed = () => {
         // Aquí defines la acción que deseas ejecutar
         if(email !== "" && password !== ""){   
@@ -41,8 +48,16 @@ export default function Login() {
                     .then(response => response.json())
                     .then(data => {
                       // Maneja los datos recibidos
+                      if(data.userType != undefined){
                       setCookie('user_type',data.userType , { path: '/' , sameSite: 'none', secure: true});
+                      alert("Inicio sesión correctamente. Se redirigirá a la página de inicio.");
+                      navigate("/");
                       console.log(data);
+                      }else{
+
+                       alert("credenciales invalidas. Vuelva a intentar.")
+
+                      }
 
                     })
                     .catch(error => {
@@ -69,6 +84,17 @@ export default function Login() {
             <a href="/">Inicio</a>
             <a href="#">Contacto</a>
             <a href="#">{cookies.user_type}</a>
+            {cookies.user_type != "" ? (
+                            <a className='Button' onClick={setCookie("user_type", "")} >Salir de sesión</a>
+                        ) : (
+                            <a onClick={Go_to_Login}>Iniciar Sesión</a>
+            )}
+
+            {cookies.userType === "Personal" && (
+                        <a onClick={() => setCookie("user_type", "")}>
+                        Salir de sesión
+                        </a>
+            )}
 
         </nav>
     </header>

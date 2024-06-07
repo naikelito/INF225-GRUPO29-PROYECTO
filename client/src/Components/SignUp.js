@@ -90,6 +90,16 @@ export default function SignUp() {
         }
     };
 
+
+    const Pressed = () => {
+        setCookie('user_type', "");
+    };
+
+    const Go_to_Login = () => {
+        navigate("/Login");
+    };
+
+
     return (
         <div>
             <header className="xd">
@@ -97,7 +107,13 @@ export default function SignUp() {
                     <a href="/">Inicio</a>
                     <a href="#">Contacto</a>
                     <a href="#">{cookies.user_type}</a>
-                    
+
+                    {cookies.user_type != "" ? (
+                            <a className='Button' onClick={Pressed} >Salir de sesión</a>
+                        ) : (
+                            <a onClick={Go_to_Login}>Iniciar Sesión</a>
+                    )}
+
                 </nav>
             </header>
             <div className="login-box">
