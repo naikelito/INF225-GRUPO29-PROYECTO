@@ -25,6 +25,15 @@ export default function Login() {
         navigate("/SignUp");
 
     };
+
+    const Go_to_Login = () => {
+        navigate("/Login");
+    };
+
+    const Go_to_Incio = () => {
+        navigate("/");
+    };
+
     const Pressed = () => {
         // Aquí defines la acción que deseas ejecutar
         if(email !== "" && password !== ""){   
@@ -41,7 +50,15 @@ export default function Login() {
                     .then(response => response.json())
                     .then(data => {
                       // Maneja los datos recibidos
+                      if(data.userType != undefined){
                       setCookie('user_type',data.userType , { path: '/' , sameSite: 'none', secure: true});
+                      alert("¡Se ha registrado exitosamente!. Será devuelto a la página principal.");
+                      navigate("/");
+
+                      }else{
+
+                      alert("Credenciales invalidas. Vuelva a intentarlo.");
+                      }
                       console.log(data);
 
                     })
@@ -66,9 +83,16 @@ export default function Login() {
 
      <header class="xd">
         <nav class="navegation">
-            <a href="#">Inicio</a>
+            <a onClick={Go_to_Incio}>Inicio</a>
             <a href="#">Contacto</a>
             <a href="#">{cookies.user_type}</a>
+
+            {cookies.user_type != "" ? (
+                            <button className='Button' onClick={Pressed}  >  <a>Salir de sesión</a></button>
+                        ) : (
+                            <a onClick={Go_to_Login}>Iniciar Sesión</a>
+            )}
+
 
         </nav>
     </header>

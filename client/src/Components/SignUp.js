@@ -54,6 +54,18 @@ export default function SignUp() {
         setSelectedDate(date);
     };
 
+    const Go_to_Incio = () => {
+        navigate("/");
+    };
+
+    const Pressed = () => {
+        setCookie('user_type', "");
+    };
+
+    const Go_to_Login = () => {
+        navigate("/Login");
+    };
+
     const handleSubmit = () => {
         if(email !== "" && password !== "" && fullName !== "" && rut !== "" && allergies !== "" && fonasa !== "" && selectedDate !== null && telefono !== "" && direccion !== "") {   
             fetch('http://localhost:8080/api/pacientes/signup', {
@@ -94,9 +106,15 @@ export default function SignUp() {
         <div>
             <header className="xd">
                 <nav className="navegation">
-                    <a href="#">Inicio</a>
+                    <a onClick={Go_to_Incio}>Inicio</a>
                     <a href="#">Contacto</a>
                     <a href="#">{cookies.user_type}</a>
+                    <a>{cookies.user_type}</a>
+                    {cookies.user_type != "" ? (
+                            <button className='Button' onClick={Pressed}  >  <a>Salir de sesión</a></button>
+                        ) : (
+                            <a onClick={Go_to_Login}>Iniciar Sesión</a>
+                        )}
                     
                 </nav>
             </header>

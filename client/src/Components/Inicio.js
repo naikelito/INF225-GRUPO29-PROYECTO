@@ -33,6 +33,10 @@ export default function Inicio() {
         navigate("/Login");
     };
 
+    const Go_to_Incio = () => {
+        navigate("/");
+    };
+
 
 
 
@@ -40,11 +44,11 @@ export default function Inicio() {
         <div>
             <header className="xd">
                 <nav className="navegation">
-                    <a href="#">Inicio</a>
+                    <a onClick={Inicio}>Inicio</a>
                     <a href="#">Contacto</a>
                     <a>{cookies.user_type}</a>
                     {cookies.user_type != "" ? (
-                            <button className='Button' onClick={Pressed} >Salir de sesión</button>
+                            <button className='Button' onClick={Pressed}  >  <a>Salir de sesión</a></button>
                         ) : (
                             <a onClick={Go_to_Login}>Iniciar Sesión</a>
                         )}
@@ -68,7 +72,7 @@ export default function Inicio() {
                 </div>
                 <div className="map-info-container">
                     <div className="map-container">
-                        <MapContainer style={{ height: "400px", width: "100%" }} center={[-33.51884,-70.59663]} zoom={13} scrollWheelZoom={false}>
+                        <MapContainer style={{ height: "200px", width: "100%" }} center={[-33.51884,-70.59663]} zoom={13} scrollWheelZoom={false}>
                             <TileLayer
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
