@@ -4,8 +4,9 @@ import { getTest } from './funtions/test';
 import { BrowserRouter as Router, Route, Switch, Link, Routes} from 'react-router-dom';
 import { Cookies, CookiesProvider, useCookies } from 'react-cookie'
 
-import Log from './Components/Log';
 import SignUp from './Components/SignUp';
+import Inicio from './Components/Inicio';
+import Login from './Components/Log';
 
 /*
   const [data,setData] = useState("hello world!");
@@ -32,8 +33,9 @@ return(
     <Router>
         <CookiesProvider>
           <Routes>
-            <Route path = "/" element={<Log/>}/>
+            <Route path = "/" element={<Inicio/>}/>
             <Route path = "/SignUp" element={<SignUp/>}/>
+            <Route path = "/Login" element={<Login/>}/>
             
           </Routes>
         </CookiesProvider>

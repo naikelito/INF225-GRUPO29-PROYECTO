@@ -97,6 +97,7 @@ export default function SignUp() {
                     <a href="#">Inicio</a>
                     <a href="#">Contacto</a>
                     <a href="#">{cookies.user_type}</a>
+                    
                 </nav>
             </header>
             <div className="login-box">
