@@ -103,6 +103,15 @@ export default function Inicio() {
                     </div>
 
                 </div>
+
+
+                <div className="info-container">
+                <h3>Información de la Ubicación</h3>
+                <p><strong>Dirección:</strong> Serafín Zamora 190, 8241479 La Florida, Región Metropolitana</p>
+                <p><strong>Teléfono:</strong> +56222702700</p>
+                <p><strong>Horario:</strong> Abierto todos los días las 24hrs</p>
+                <p><strong>Servicios:</strong> Resonancias Magnéticas, Tomografías, Ecografías, Radiografías</p>
+                </div>
             </div>
         </div>
     );
