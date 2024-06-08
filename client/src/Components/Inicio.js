@@ -44,6 +44,26 @@ export default function Inicio() {
         }
     };
 
+    const Go_to_History = () => {
+        navigate("/History");
+    };
+
+
+    const Go_to_SignUpPer = () => {
+        navigate("/SignUpPer");
+    };
+
+    let boton;
+
+    if(cookies.user_type == "Personal"){
+   
+        boton = <button className='submit-btn' onChange={Go_to_SignUpPer} >Registrar Personal</button>
+
+    } else{
+
+        boton = <h1></h1>
+    }
+
 
     return (
         <div>
@@ -53,13 +73,16 @@ export default function Inicio() {
                     <a href="#">Contacto</a>
                     <a>{cookies.user_type}</a>
                     {cookies.user_type != "" ? (
-                            <button className='Button' onClick={Pressed} >Salir de sesión</button>
+                            <a className='Button' onClick={Pressed} >Salir de sesión</a>
                         ) : (
                             <a onClick={Go_to_Login}>Iniciar Sesión</a>
-                        )}
+                    )}
+                    <a onClick={Go_to_History}>Revisar historial de citas</a>
+
 
                 </nav>
             </header>
+
             <div className="login-box">
                 <div className="login-header">
                 {cookies.user_type != "" ? (
@@ -74,7 +97,9 @@ export default function Inicio() {
                 </h2>
                 <div className="input-submit">
                     <button onClick={handleReservation} className="submit-btn">Reserva tu hora</button>
+                    {boton}
                 </div>
+
                 <div className="map-info-container">
                     <div className="map-container">
                         <MapContainer style={{ height: "400px", width: "100%" }} center={[-33.51884,-70.59663]} zoom={13} scrollWheelZoom={false}>
@@ -85,13 +110,7 @@ export default function Inicio() {
                             <Marker icon={customMarkerIcon} position={[-33.51884,-70.59663]} />
                         </MapContainer>
                     </div>
-                    <div className="info-container">
-                        <h3>Información de la Ubicación</h3>
-                        <p><strong>Dirección:</strong> Serafín Zamora 190, 8241479 La Florida, Región Metropolitana</p>
-                        <p><strong>Teléfono:</strong> +56222702700</p>
-                        <p><strong>Horario:</strong> Abierto todos los días las 24hrs</p>
-                        <p><strong>Servicios:</strong> Resonancias Magnéticas, Tomografías, Ecografías, Radiografías</p>
-                    </div>
+
                 </div>
             </div>
         </div>
