@@ -53,17 +53,6 @@ export default function Inicio() {
         navigate("/SignUpPer");
     };
 
-    let boton;
-
-    if(cookies.user_type == "Personal"){
-   
-        boton = <button className='submit-btn' onChange={Go_to_SignUpPer} >Registrar Personal</button>
-
-    } else{
-
-        boton = <h1></h1>
-    }
-
 
     return (
         <div>
@@ -97,7 +86,9 @@ export default function Inicio() {
                 </h2>
                 <div className="input-submit">
                     <button onClick={handleReservation} className="submit-btn">Reserva tu hora</button>
-                    {boton}
+                    {cookies.user_type === "Personal" ? (
+                     <button className='submit-btn' onClick={Go_to_SignUpPer} >Registrar Personal</button>
+                    ) : null}
                 </div>
 
                 <div className="map-info-container">
