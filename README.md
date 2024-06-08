@@ -24,3 +24,9 @@ Hito 2:
 Hito 3:
 - La nuevas HU desarrolladsa fueron la de jefe de unidad y TENS. Se implementó el código.
 - La tabla se encuentra subira junto a este readme.
+
+Hito 4:
+- Se implementó la HU de paciente
+- Se implementó la HU de TENS
+- los concerns y tradeoffs de arquitectura se encuentran en la Wiki
+- el desarrollo (código) se encuentra en la branch mern
