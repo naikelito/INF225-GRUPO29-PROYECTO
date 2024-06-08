@@ -26,6 +26,7 @@ Hito 3:
 - La tabla se encuentra subira junto a este readme.
 
 Hito 4:
+- video HITO 4 [Aquí](https://youtu.be/6mVbUZ7k00k)
 - Se implementó la HU de paciente
 - Se implementó la HU de TENS
 - los concerns y tradeoffs de arquitectura se encuentran en la Wiki
