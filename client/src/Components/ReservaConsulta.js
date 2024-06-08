@@ -9,17 +9,13 @@ export default function ReserveConsultation() {
     const [medicoSeleccionado, setMedicoSeleccionado] = useState('');
     const [posibleDiagnostico, setPosibleDiagnostico] = useState('');
     const [hora, setHora] = useState('');
-    const [cookies] = useCookies(['id_usuario']);
+    const [cookies] = useCookies(['rut', 'token', 'email', 'user_type']);
     const navigate = useNavigate();
 
-    // Obtener el RUT del paciente de la sesión actual
-    const rutPaciente = cookies.id_usuario;
-
     useEffect(() => {
-        // Obtener la lista de médicos al montar el componente
         fetch('http://localhost:8080/api/personal/medicos', {
             headers: {
-                'x-auth-token': cookies.id_usuario
+                'x-auth-token': cookies.token
             }
         })
         .then(response => {
@@ -41,10 +37,10 @@ export default function ReserveConsultation() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'x-auth-token': cookies.id_usuario
+                'x-auth-token': cookies.token
             },
             body: JSON.stringify({
-                rut_paciente: rutPaciente,
+                rut_paciente: cookies.rut,
                 rut_medico: medicoSeleccionado,
                 tipo_examen: examType,
                 posible_diagnostico: posibleDiagnostico,

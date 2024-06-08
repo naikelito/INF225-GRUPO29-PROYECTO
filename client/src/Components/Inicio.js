@@ -34,6 +34,15 @@ export default function Inicio() {
     };
 
 
+    const handleReservation = () => {
+        if (cookies.user_type !== "") {
+            // Si la sesión está iniciada, redirigir a la página de exámenes
+            navigate("/examenes");
+        } else {
+            // Si la sesión no está iniciada, redirigir a la página de inicio de sesión
+            navigate("/Login");
+        }
+    };
 
 
     return (
@@ -64,7 +73,7 @@ export default function Inicio() {
                     ¡Bienvenidos a la Clínica Dávila! Somos especialistas en imagenología, dedicados a ofrecer diagnósticos precisos mediante técnicas avanzadas como resonancias magnéticas, tomografías computarizadas, ecografías y radiografías. Contamos con un equipo de profesionales altamente capacitados y tecnología de última generación, comprometidos con tu salud y bienestar. Tu diagnóstico en las mejores manos.
                 </h2>
                 <div className="input-submit">
-                    <button onClick={Pressed} className="submit-btn">Reserva tu hora</button>
+                    <button onClick={handleReservation} className="submit-btn">Reserva tu hora</button>
                 </div>
                 <div className="map-info-container">
                     <div className="map-container">

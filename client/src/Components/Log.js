@@ -26,37 +26,40 @@ export default function Login() {
 
     };
     const Pressed = () => {
-        // Aquí defines la acción que deseas ejecutar
         if(email !== "" && password !== ""){   
-                fetch('http://localhost:8080/api/auth/login', {
-                    method: 'POST',
-                    headers: {
-                      'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        "email": email,
-                        "password": password,
-                    }),
-                  })
-                    .then(response => response.json())
-                    .then(data => {
-                      // Maneja los datos recibidos
-                      setCookie('user_type',data.userType , { path: '/' , sameSite: 'none', secure: true});
-                      console.log(data);
-
-                    })
-                    .catch(error => {
-                      // Maneja cualquier error
-                      console.error('Error:', error);
-                    });
-
-        }else{
+            fetch('http://localhost:8080/api/auth/login', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    "email": email,
+                    "password": password,
+                }),
+              })
+                .then(response => response.json())
+                .then(data => {
+                  if (data.token) {
+                      setCookie('token', data.token, { path: '/', sameSite: 'none', secure: true });
+                      setCookie('user_type', data.userType, { path: '/', sameSite: 'none', secure: true });
+                      setCookie('id_usuario', data.user.id, { path: '/', sameSite: 'none', secure: true });
+                      setCookie('rut', data.user.rut, { path: '/', sameSite: 'none', secure: true });
+                      setCookie('email', email, { path: '/', sameSite: 'none', secure: true });
+                      setCookie('nombre', data.user.nombre, { path: '/', sameSite: 'none', secure: true });
+                      // Navega a la página deseada después del login
+                      navigate("/");
+                  } else {
+                      alert("Error en el login. Por favor, revisa tus credenciales.");
+                  }
+                })
+                .catch(error => {
+                  console.error('Error:', error);
+                });
+        } else {
             alert("No pueden quedar casillas en blanco. Vuelva a introducir los datos nuevamente");
         }
-
-
     };
-  
+    
 
       
 

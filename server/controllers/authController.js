@@ -20,6 +20,7 @@ exports.login = async (req, res) => {
             const payload = {
                 user: {
                     id: user.id,
+                    rut: user.rut, // Asegúrate de que el campo 'rut' está presente
                     type: 'Paciente'
                 }
             };
@@ -30,7 +31,7 @@ exports.login = async (req, res) => {
                 { expiresIn: '1h' },
                 (err, token) => {
                     if (err) throw err;
-                    res.json({ token, userType: 'Paciente' });
+                    res.json({ token, userType: 'Paciente', user: { id: user.id, rut: user.rut, email: user.email, nombre: user.nombre } });
                 }
             );
         } else {
@@ -47,6 +48,7 @@ exports.login = async (req, res) => {
             const payload = {
                 user: {
                     id: user.id,
+                    rut: user.rut, // Asegúrate de que el campo 'rut' está presente
                     type: 'Personal'
                 }
             };
@@ -57,7 +59,7 @@ exports.login = async (req, res) => {
                 { expiresIn: '1h' },
                 (err, token) => {
                     if (err) throw err;
-                    res.json({ token, userType: 'Personal' });
+                    res.json({ token, userType: 'Personal', user: { id: user.id, rut: user.rut, email: user.email, nombre: user.nombre } });
                 }
             );
         }
@@ -66,7 +68,6 @@ exports.login = async (req, res) => {
         res.status(500).send('Error del servidor');
     }
 };
-
 
 // Controlador para cerrar sesión
 exports.logout = (req, res) => {
