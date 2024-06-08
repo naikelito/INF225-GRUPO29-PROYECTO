@@ -47,7 +47,13 @@ export default function Login() {
                       setCookie('email', email, { path: '/', sameSite: 'none', secure: true });
                       setCookie('nombre', data.user.nombre, { path: '/', sameSite: 'none', secure: true });
                       // Navega a la página deseada después del login
-                      navigate("/");
+                      //alert(data.userType);
+                    if (data.userType === 'tens') {
+                        navigate('/Reportes');
+                    } else {
+                        navigate('/');
+                    }
+
                   } else {
                       alert("Error en el login. Por favor, revisa tus credenciales.");
                   }
@@ -60,9 +66,9 @@ export default function Login() {
         }
     };
     
+    
 
       
-
   return (
 
     <div>

@@ -11,6 +11,7 @@ import Examenes from './Components/Examenes';
 import ReserveConsultation from './Components/ReservaConsulta';
 import SignUpPers from './Components/SignUpPers';
 import History from './Components/History';
+import Reportes from './Components/Reportes';
 
 
 function App() {
@@ -27,6 +28,7 @@ return(
             <Route path="/examenes" element={<Examenes/>} />
             <Route path="/SignUpPer" element={<SignUpPers/>}/>
             <Route path="/History" element={<History/>}/>
+            <Route path="/Reportes" element={<Reportes/>}/>
             
           </Routes>
         </CookiesProvider>

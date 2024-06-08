@@ -31,7 +31,7 @@ exports.login = async (req, res) => {
                 { expiresIn: '1h' },
                 (err, token) => {
                     if (err) throw err;
-                    res.json({ token, userType: 'Paciente', user: { id: user.id, rut: user.rut, email: user.email, nombre: user.nombre } });
+                    res.json({ token, userType: 'Paciente', user: { id: user.id, rut: user.rut, email: user.email, nombre: user.nombre, cargo: 'Paciente' } });
                 }
             );
         } else {
@@ -49,7 +49,7 @@ exports.login = async (req, res) => {
                 user: {
                     id: user.id,
                     rut: user.rut, // Asegúrate de que el campo 'rut' está presente
-                    type: 'Personal'
+                    type: user.cargo // Utiliza el cargo del personal como tipo de usuario
                 }
             };
 
@@ -59,7 +59,7 @@ exports.login = async (req, res) => {
                 { expiresIn: '1h' },
                 (err, token) => {
                     if (err) throw err;
-                    res.json({ token, userType: 'Personal', user: { id: user.id, rut: user.rut, email: user.email, nombre: user.nombre } });
+                    res.json({ token, userType: user.cargo, user: { id: user.id, rut: user.rut, email: user.email, nombre: user.nombre, cargo: user.cargo } });
                 }
             );
         }
