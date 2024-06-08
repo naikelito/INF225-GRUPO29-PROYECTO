@@ -93,6 +93,7 @@ export default function SignUp() {
 
     const Pressed = () => {
         setCookie('user_type', "");
+        setCookie('token', "");
     };
 
     const Go_to_Login = () => {

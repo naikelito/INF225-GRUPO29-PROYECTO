@@ -20,6 +20,7 @@ export default function History() {
     const Pressed = () => {
         // Aquí defines la acción que deseas ejecutar
         setCookie('user_type', "");
+        setCookie('token', "");
     };
 
     const fetchHistory = () => {

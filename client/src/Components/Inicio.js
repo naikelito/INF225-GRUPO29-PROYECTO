@@ -27,6 +27,7 @@ export default function Inicio() {
     const [cookies, setCookie, removeCookie] = useCookies(['id_usuario','user_type']);
     const Pressed = () => {
         setCookie('user_type', "");
+        setCookie('token', "");
     };
 
     const Go_to_Login = () => {
