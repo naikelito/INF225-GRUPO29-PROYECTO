@@ -27,17 +27,21 @@ Hito 3:
 
 Hito 4:
 - video HITO 4 [Aquí](https://youtu.be/6mVbUZ7k00k)
-- Se implementó la HU de paciente
-- Se implementó la HU de TENS
-- los concerns y tradeoffs de arquitectura se encuentran en la Wiki
-- el desarrollo (código) se encuentra en la branch mern
-- Incorporación de reserva de horarios para que personal administrativo pueda agendar las citas de clientes, justificando
-  la automatización, centralización en la toma de datos digitalmente, reducir demora y coordinción manual entre usuarios.
-- Incorporación de vista del historial de reservas que interactúa con la base de datos para tener acceso desde cualquier 
-  sitio, permitiedo una mayor eficiencia en la labor de consulta presencialmente y brindar un servicio de mejor calidad.
-- Interfaz de inicio que permite al usuario, sea personal administrativo opaciente que le permite localizar todas las opciones 
-  disponibles a interactuar. Reduce el tiempo de búsqueda y mejora la experiencia de usuario.
--Inclusión de mapa interactivo para que el usuario tenga como referencia la ubicación precisa del centro.
-- Incorporación de registros de clientes y personal del centro en dos vistas separadas. Permite obtener información del usuario y 
- tener un control de acceso para brindar una mayor seguridad. 
+
+  * Modificaciones
+  - Incorporación de reserva de horarios para que personal administrativo pueda agendar las citas de clientes, justificando
+    la automatización, centralización en la toma de datos digitalmente, reducir demora y coordinción manual entre usuarios.
+  - Incorporación de vista del historial de reservas que interactúa con la base de datos para tener acceso desde cualquier 
+    sitio, permitiedo una mayor eficiencia en la labor de consulta presencialmente y brindar un servicio de mejor calidad.
+  - Interfaz de inicio que permite al usuario, sea personal administrativo opaciente que le permite localizar todas las opciones 
+    disponibles a interactuar. Reduce el tiempo de búsqueda y mejora la experiencia de usuario.
+  -Inclusión de mapa interactivo para que el usuario tenga como referencia la ubicación precisa del centro.
+  - Incorporación de registros de clientes y personal del centro en dos vistas separadas. Permite obtener información del usuario y 
+   tener un control de acceso para brindar una mayor seguridad.
+
+  * aspectos importantes
+  - Se implementó la HU de paciente
+  - Se implementó la HU de TENS
+  - los concerns y tradeoffs de arquitectura se encuentran en la Wiki
+  - el desarrollo (código) se encuentra en la branch mern
 
