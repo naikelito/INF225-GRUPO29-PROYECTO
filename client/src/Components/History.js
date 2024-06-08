@@ -20,6 +20,7 @@ export default function History() {
     const Pressed = () => {
         // Aquí defines la acción que deseas ejecutar
         setCookie('user_type', "");
+        setCookie('token', "");
     };
 
     const fetchHistory = () => {
@@ -66,8 +67,8 @@ export default function History() {
                         <p>Rut Paciente: {obj.rut_paciente}</p>
                         <p>Rut Medico: {obj.rut_medico}</p>
                         <p>Tipo Examen: {obj.tipo_examen}</p>
-                        <p>Tipo Examen: {obj.posible_diagnostico}</p>
-                        <p>Tipo Examen: {obj.hora}</p>
+                        <p>Posible Diagnostico: {obj.posible_diagnostico}</p>
+                        <p>Hora: {obj.hora}</p>
                         {/* Agrega aquí el resto de los datos que deseas mostrar */}
                     </div>
                 ))}

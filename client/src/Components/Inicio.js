@@ -27,6 +27,7 @@ export default function Inicio() {
     const [cookies, setCookie, removeCookie] = useCookies(['id_usuario','user_type']);
     const Pressed = () => {
         setCookie('user_type', "");
+        setCookie('token', "");
     };
 
     const Go_to_Login = () => {
@@ -52,17 +53,6 @@ export default function Inicio() {
     const Go_to_SignUpPer = () => {
         navigate("/SignUpPer");
     };
-
-    let boton;
-
-    if(cookies.user_type == "Personal"){
-   
-        boton = <button className='submit-btn' onChange={Go_to_SignUpPer} >Registrar Personal</button>
-
-    } else{
-
-        boton = <h1></h1>
-    }
 
 
     return (
@@ -97,7 +87,9 @@ export default function Inicio() {
                 </h2>
                 <div className="input-submit">
                     <button onClick={handleReservation} className="submit-btn">Reserva tu hora</button>
-                    {boton}
+                    {cookies.user_type === "Personal" ? (
+                     <button className='submit-btn' onClick={Go_to_SignUpPer} >Registrar Personal</button>
+                    ) : null}
                 </div>
 
                 <div className="map-info-container">
@@ -111,6 +103,15 @@ export default function Inicio() {
                         </MapContainer>
                     </div>
 
+                </div>
+
+
+                <div className="info-container">
+                <h3>Información de la Ubicación</h3>
+                <p><strong>Dirección:</strong> Serafín Zamora 190, 8241479 La Florida, Región Metropolitana</p>
+                <p><strong>Teléfono:</strong> +56222702700</p>
+                <p><strong>Horario:</strong> Abierto todos los días las 24hrs</p>
+                <p><strong>Servicios:</strong> Resonancias Magnéticas, Tomografías, Ecografías, Radiografías</p>
                 </div>
             </div>
         </div>
