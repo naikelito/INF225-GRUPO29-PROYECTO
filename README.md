@@ -36,4 +36,7 @@ Hito 4:
   sitio, permitiedo una mayor eficiencia en la labor de consulta presencialmente y brindar un servicio de mejor calidad.
 - Interfaz de inicio que permite al usuario, sea personal administrativo opaciente que le permite localizar todas las opciones 
   disponibles a interactuar. Reduce el tiempo de búsqueda y mejora la experiencia de usuario.
--Inclusión de mapa interactivo para que el usuario tenga como referencia la ubicación precisa del centro.      
+-Inclusión de mapa interactivo para que el usuario tenga como referencia la ubicación precisa del centro.
+- Incorporación de registros de clientes y personal del centro en dos vistas separadas. Permite obtener información del usuario y 
+ tener un control de acceso para brindar una mayor seguridad. 
+
