@@ -110,7 +110,7 @@ export default function SignUp() {
                     <a href="#">{cookies.user_type}</a>
 
                     {cookies.user_type != "" ? (
-                            <a className='Button' onClick={Pressed} >Salir de sesión</a>
+                            <button onClick={Pressed} >Salir de sesión</button>
                         ) : (
                             <a onClick={Go_to_Login}>Iniciar Sesión</a>
                     )}
