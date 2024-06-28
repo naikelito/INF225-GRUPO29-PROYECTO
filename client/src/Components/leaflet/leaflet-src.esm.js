@@ -247,7 +247,7 @@ function cancelAnimFrame(id) {
 	}
 }
 
-var Util = {
+const Util = {
   __proto__: null,
   extend: extend,
   create: create$2,
