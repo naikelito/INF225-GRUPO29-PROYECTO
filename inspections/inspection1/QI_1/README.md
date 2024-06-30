@@ -1,4 +1,6 @@
 En esta Quality Issue sonarloud nos indica que debemos usar const en vez de var, esto afecta a la Reliability del sistema.
+![image](https://github.com/naikelito/INF225-GRUPO29-PROYECTO/assets/84542201/dbd7002a-3941-4bfe-b62d-57f9372d99dd)
+
 ![image](https://github.com/naikelito/INF225-GRUPO29-PROYECTO/assets/84542201/178413f0-1c80-41a9-8091-b5909372f466)
 
 Por qué esto es un problema?
