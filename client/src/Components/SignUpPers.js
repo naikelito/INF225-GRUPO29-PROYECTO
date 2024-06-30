@@ -117,9 +117,9 @@ export default function SignUpPers() {
             <a href="#">{cookies.user_type}</a>
 
             {cookies.user_type != "" ? (
-                    <a className='Button' onClick={Pressed} >Salir de sesión</a>
+                    <button onClick={Pressed} onKeyDown={Pressed} >Salir de sesión</button>
                 ) : (
-                    <a onClick={Go_to_Login}>Iniciar Sesión</a>
+                    <button onClick={Go_to_Login} onKeyDown={Go_to_Login}>Iniciar Sesión</button>
             )}
 
         </nav>
