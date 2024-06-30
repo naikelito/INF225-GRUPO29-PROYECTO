@@ -44,3 +44,8 @@ Puede acceder a la Wiki mediante el siguiente [Home_wiki](https://github.com/nai
       - los concerns y tradeoffs de arquitectura se encuentran en la Wiki
       - el desarrollo (código) se encuentra en la branch mern
 
+## Hito 5:
+ * aspectos importantes:
+   - Dado que sonarcloud encontrtó muy pocos errores (los únicos errores son cambios de 'var' a 'const') se solucionaron quality issues enfocados en la accesibilidad de los pacientes.
+   - No se encontraron warnings o problemas de quality issues considerables para el correcto uso del sistema, por lo que se tomaron los mencionados anteriormente.
+   - Dado que el hito 5 solicita explicitamente que las inspecciones de quality issues vayan en una carpeta. Se crearon las carpetas para la inspección 1 y 2 respectivamente a pesar de no ser muy práctico (se podría haber usado la wiki)
