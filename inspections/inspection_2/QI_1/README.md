@@ -1,2 +1,6 @@
 Aquí se soluciona el quality issue 1
-![image](https://github.com/naikelito/INF225-GRUPO29-PROYECTO/assets/84542201/5fb1ad63-f4fa-4618-9039-dd778975d91f)
+
+Mediante la adición del event handler OnKeyDown, se agregó accesibilidad para usuarios que solo utilizan teclados u otras opciones que no sean mouse.
+
+![image](https://github.com/naikelito/INF225-GRUPO29-PROYECTO/assets/84542201/c0b7e55f-cae7-4cd5-bf75-d625b4a4f9a6)
+
